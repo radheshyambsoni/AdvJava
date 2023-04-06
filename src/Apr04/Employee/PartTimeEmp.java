@@ -1,4 +1,4 @@
-package Apr04;
+package Apr04.Employee;
 
 public class PartTimeEmp extends Employee{
     @Override

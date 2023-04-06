@@ -1,10 +1,10 @@
-package Apr04;
+package Apr04.Car;
 
-public class Sedan implements Car {
+public class Sedan implements CarInt {
     private String companyName;
-    private int price;
+    private double price;
     
-    public Sedan(String companyName, int price) {
+    public Sedan(String companyName, double price) {
         this.companyName = companyName;
         this.price = price;
     }
@@ -22,7 +22,7 @@ public class Sedan implements Car {
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
     public void setPrice(int price) {

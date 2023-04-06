@@ -1,6 +1,6 @@
-package Apr04;
+package Apr04.Car;
 
-public interface Car {
+public interface CarInt {
     int numOfWheels=4; // this variable is by defualt final
     public void accelerate();
     public void media();
