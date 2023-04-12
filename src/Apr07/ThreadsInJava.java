@@ -42,7 +42,7 @@ class ThreadZ implements Runnable{
     }    
 }
 
-public class MultiThreading{
+public class ThreadsInJava{
     public static void main(String[] args) {
         ThreadA a=new ThreadA();
         ThreadB b=new ThreadB();

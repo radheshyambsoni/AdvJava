@@ -1,6 +1,6 @@
 package Apr06.ExceptionHandling;
 
-import java.util.InputMismatchException;
+// import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -36,6 +36,7 @@ public class Main {
         Square s;
         try{//other 
             s=new Square(side);
+            System.out.println(s.calculateArea());
         }catch(Exception e){
             System.out.println("Invalid value!");
         }
