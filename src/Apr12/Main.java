@@ -35,19 +35,22 @@ public class Main {
         // update data
         try{
             // // 1. Load the driver
-            // Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
             // 2. Create the connection object
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "r11b12@ROOT");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/emp", "root", "r11b12@ROOT");
+            
             // 3. Create Statement
             Statement stmt=con.createStatement();
-
+            
             // create a table
+            
             // the stmt is subjective to the db used - for ex the below stmt is for oracle db
             // for mysql - number -> integer, varchar2 -> varchar
-            String sql="create table emp(id number(10), name varchar2(40), age number(3))";
+            String sql="create table emp(id INTEGER, name VARCHAR(40), age INTEGER)";
             stmt.executeUpdate(sql);
             con.commit();
-
+            
             Employee e=new Employee();
             for(int i=0;i<3;i++){
                 e.input();
@@ -59,7 +62,7 @@ public class Main {
                 pstmt.executeUpdate();
                 pstmt.close();
             }
-
+            
             // 4. Execute Statement
             ResultSet rs=stmt.executeQuery("select * from emp");
             // Displaying values
@@ -72,7 +75,7 @@ public class Main {
             rs.close();
             
             // Updating values
-            stmt.executeUpdate("update emp set id="+3+"where name="+"Raman");
+            stmt.executeUpdate("update emp set id="+3+"where name="+"'Raman'");
             con.commit();
 
             rs=stmt.executeQuery("select * from emp");
