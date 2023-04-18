@@ -58,5 +58,6 @@ public class SynchronizationInJava {
         Account acc=new Account(1000, "10994");
         TransWithdraw tw=new TransWithdraw(acc, 300);
         TransDeposit td=new TransDeposit(acc,200);
+        System.out.println(tw+" "+td);
     }
 }
