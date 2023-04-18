@@ -155,6 +155,9 @@ public class CalcWithBtnsOnly implements ActionListener {
         else if(op=='/') res/=num2;
 
         ans.setText(Double.toString(res));
+        res=0;
+        num2=0;
+        exp.setLength(0);
     }
 
     public static void main(String[] args) {
