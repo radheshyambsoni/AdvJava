@@ -89,7 +89,7 @@ public class CalcWithBtnsOnly implements ActionListener {
 
         ans.setText("0");
 
-        f.setSize(500, 500);
+        f.setSize(200, 280);
         f.setLayout(null);
         f.setVisible(true);
     }
