@@ -47,7 +47,7 @@ public class BasicCalc implements ActionListener{
         f.add(div);
         f.add(quit);
 
-        f.setSize(900, 300);
+        f.setSize(300, 300);
         f.setLayout(null);
         f.setVisible(true);
         
@@ -78,7 +78,8 @@ public class BasicCalc implements ActionListener{
                 double b=Double.parseDouble(n2.getText());
                 ans.setText(Double.toString((a/b)));
             }else if(e.getActionCommand().equals("Quit")){
-                System.exit(0);
+                // System.exit(0);
+                f.dispose();
             }
         }catch(Exception ex){
             ans.setText("Invalid operation!");
