@@ -23,9 +23,8 @@ public class GUI{
         //                                      |--------------|        Applet
         //                                   Frame           Dialog
 
-        // First f=new First();
+        new First();
 
-        Add a=new Add();
-        System.out.println(a);
+        new Add();
     }
 }

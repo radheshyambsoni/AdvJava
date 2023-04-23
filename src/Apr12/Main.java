@@ -36,6 +36,8 @@ public class Main {
         // update data
 
         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
             // step2 create  the connection object
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "r11b12@ROOT");
 
@@ -55,7 +57,6 @@ public class Main {
             while (rs.next()) {
                 System.out.println(rs.getInt(1)+" "+rs.getString(2));
             }
-            // System.out.println(hm);
 
         } catch (Exception e) {
             System.out.println(e);

@@ -1,5 +1,15 @@
 package Apr04;
 
 public final class FinalClass {
-    // after using 'final' keyword, this class cannot be inherited
+    static FinalClass f;
+    public static FinalClass getInstance() {
+        if(f==null){
+            f=new FinalClass();
+        }
+        return f;
+    }
+    @Override
+    public String toString() {
+        return "This is a final class";
+    }    
 }

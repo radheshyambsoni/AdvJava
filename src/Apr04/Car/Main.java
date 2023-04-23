@@ -17,10 +17,11 @@ public class Main {
         char input=' ';
         do{
             System.out.println("Enter V for view, A to add, D to Delete, Q to Quit");
+            input=sc.next().charAt(0);
             switch(input){
                 case 'V': data.view(); break;
                 case 'A': 
-                    System.out.println("Enter company name: ");
+                System.out.println("Enter company name: ");
             }
         }while(input!='Q');
     }

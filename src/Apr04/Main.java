@@ -10,5 +10,7 @@ public class Main {
 
         // Interfaces - blueprint/template for building classes
         // A class can implement as multiple interfaces
+        FinalClass f=FinalClass.getInstance();
+        System.out.println(f);
     }
 }
