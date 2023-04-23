@@ -8,7 +8,7 @@ public class PanelDem0 {
         f.setSize(200,250);
         Panel p =new Panel();
         p.setLayout(new GridLayout(5,3));
-        String[] s ={"0", "+", "-","*", "/", "="};
+        String[] s ={"+", "0","-","*", "/", "="};
         for (int i=1; i<=9; i++){
             p.add(new Button(i+""));
         }
