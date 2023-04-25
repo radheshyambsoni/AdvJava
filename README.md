@@ -1,6 +1,6 @@
 ## Advanced Java - Codes
 
-This repo contains codes for the course - Advanced Java
+This repo contains code files for the course - Advanced Java
 
 ## Folder Structure
 
