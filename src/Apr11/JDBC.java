@@ -1,33 +1,12 @@
-package Apr12;
+package Apr11;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Scanner;
 
-class Employee {
-    int id, age;
-    String name;
-
-    public void dipslay() {
-        System.out.println(id + " " + name + " " + age);
-    }
-
-    public void input() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your id: ");
-        id = Integer.parseInt(sc.nextLine());
-        System.out.print("Enter your age: ");
-        age = Integer.parseInt(sc.nextLine());
-        System.out.print("Enter your name: ");
-        name = sc.nextLine();
-        sc.close();
-    }
-}
-
-public class Main {
+public class JDBC {
     public static void main(String[] args) {
         // Operations:
         // create a table
