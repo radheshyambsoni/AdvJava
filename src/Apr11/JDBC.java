@@ -15,12 +15,13 @@ public class JDBC {
         // update data
 
         try {
+            // Step 1
             Class.forName("com.mysql.jdbc.Driver");
             
-            // step2 create  the connection object
+            // Step 2 create  the connection object
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "r11b12@ROOT");
 
-            //step3 create the statement object  
+            // Step 3 create the statement object  
             Statement stmt=con.createStatement();
 
             // String sql="INSERT INTO Persons (ID, Name) VALUES (?, ?)";
