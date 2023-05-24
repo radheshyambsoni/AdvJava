@@ -6,10 +6,10 @@ public class PrintRectangleUsingStars {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         
-        System.out.print(" Please Enter Number of Rows : ");
+        System.out.print("Please Enter Number of Rows : ");
         int rows=sc.nextInt();
 
-        System.out.print(" Please Enter Number of Columns : ");
+        System.out.print("Please Enter Number of Columns : ");
         int cols=sc.nextInt();
         sc.close();
 

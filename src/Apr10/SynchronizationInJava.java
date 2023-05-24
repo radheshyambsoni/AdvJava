@@ -8,7 +8,7 @@ class Account{
         this.bal = bal;
         this.accNum = accNum;
     }
-    void displayBal(){
+    synchronized void displayBal(){
         System.out.println("Current Balance for account number: "+accNum+" is "+bal);
     }
     synchronized void deposit(double amt){
@@ -32,7 +32,6 @@ class TransDeposit implements Runnable{
     @Override
     public void run() {
         acc.deposit(amt);
-        acc.displayBal();
     }
 }
 
@@ -49,15 +48,14 @@ class TransWithdraw implements Runnable{
     @Override
     public void run() {
         acc.withdraw(amt);
-        acc.displayBal();
     }
 }
 
 public class SynchronizationInJava {
     public static void main(String[] args) {
         Account acc=new Account(1000, "10994");
-        TransWithdraw tw=new TransWithdraw(acc, 300);
-        TransDeposit td=new TransDeposit(acc,200);
-        System.out.println(tw+" "+td);
+        new TransWithdraw(acc, 300);
+        new TransDeposit(acc,200);
+        acc.displayBal();
     }
 }

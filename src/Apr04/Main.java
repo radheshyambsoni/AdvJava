@@ -9,7 +9,7 @@ public class Main {
         // Final variable - cannot be changed
 
         // Interfaces - blueprint/template for building classes
-        // A class can implement as multiple interfaces
+        // A class can implement multiple interfaces
         FinalClass f=FinalClass.getInstance();
         System.out.println(f);
     }

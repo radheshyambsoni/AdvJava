@@ -47,8 +47,9 @@ public class SerializationInJava{
         String name;
         int id;
         try{
-            FileOutputStream fos=new FileOutputStream("./src/Apr11/test.txt");
-            ObjectOutputStream oos=new ObjectOutputStream(fos);
+            // FileOutputStream fos=new FileOutputStream("./src/Apr11/test.txt");
+            // ObjectOutputStream oos=new ObjectOutputStream(fos);
+            ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("./src/Apr11/test.txt"));
             for(int i=0;i<3;i++){
                 System.out.print("Enter your name: ");
                 name=sc.nextLine();
@@ -64,6 +65,8 @@ public class SerializationInJava{
             System.out.println(e);
         }
         try{
+            // FileInputStream fis=new FileInputStream("./src/Apr11/test.txt");
+            // ObjectInputStream ois=new ObjectInputStream(fis);
             ObjectInputStream ois=new ObjectInputStream(new FileInputStream("./src/Apr11/test.txt"));
             for(int i=0;i<3;i++){
                 Student s1=(Student)ois.readObject();
@@ -71,7 +74,7 @@ public class SerializationInJava{
             }
             ois.close();
         }catch(Exception e){
-                System.out.println(e);
+            System.out.println(e);
         }
         sc.close();
     }

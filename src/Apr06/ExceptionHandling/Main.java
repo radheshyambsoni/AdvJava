@@ -37,9 +37,12 @@ public class Main {
         try{//other 
             s=new Square(side);
             System.out.println(s.calculateArea());
+            throw new Square();
         }catch(Exception e){
             System.out.println("Invalid value!");
+            System.out.println(e.getMessage());
+        }finally{
+            sc.close();
         }
-        sc.close();
     }
 }

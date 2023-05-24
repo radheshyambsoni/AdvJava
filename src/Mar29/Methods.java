@@ -18,8 +18,7 @@ public class Methods {
         System.out.println(a+" "+b);
     }
     static int[] swap2(int a,int b){
-        int[] ret={b,a};
-        return ret;
+        return new int[]{b,a};
     }
 
     static void myVarArgs(int... a){

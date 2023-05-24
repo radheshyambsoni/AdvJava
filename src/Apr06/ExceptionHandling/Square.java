@@ -1,6 +1,6 @@
 package Apr06.ExceptionHandling;
 
-public class Square {
+public class Square extends Exception{
     private double side;
 
     public Square(double side) throws Exception{
@@ -10,6 +10,11 @@ public class Square {
             this.side=side;
         }
     }
+
+    public Square(){
+        super("Custome error msg");
+    }
+    
     public double calculateArea(){
         return this.side*this.side;
     }
